@@ -1,8 +1,8 @@
-# helsinki-services-and-demographics
-
 # Educated in Helsinki
 
 **A study on Helsinki's service availability and its impact on the demographics of different residential areas**
+
+## [Google Colab](https://colab.research.google.com/drive/1WUox39VmuAN5vDv_pO2UcNvELQzXJMF3?usp=sharing)
 
 ## Project Description
 
