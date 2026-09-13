@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services and Demographics in Helsinki</title>
+<style>
+  :root {
+    --bg: #fbfaf8; --fg: #23201d; --muted: #5f5852;
+    --rule: #e3ded7; --card: #ffffff; --accent: #1d6f5c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #171614; --fg: #ece8e3; --muted: #a49c94;
+      --rule: #302c28; --card: #201e1b; --accent: #6fc3aa;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 940px; margin: 0 auto; padding-block: 48px; padding-left: 20px; padding-right: 20px; }
+  h1 { font-size: clamp(1.7rem, 4.5vw, 2.5rem); line-height: 1.15; margin: 0 0 .4em; letter-spacing: -.02em; }
+  h2 { font-size: 1.2rem; margin: 2.4em 0 .7em; letter-spacing: -.01em; }
+  .lede { font-size: 1.1rem; color: var(--muted); margin: 0 0 2em; max-width: 62ch; }
+  ul.findings { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  ul.findings li { background: var(--card); border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent); border-radius: 6px; padding: 14px 16px; max-width: 72ch; }
+  .mapcard { display: block; background: var(--card); border: 1px solid var(--rule);
+    border-radius: 8px; padding: 20px; text-decoration: none; color: inherit; margin-bottom: 8px; }
+  .mapcard:hover { border-color: var(--accent); }
+  .mapcard strong { color: var(--accent); display: block; margin-bottom: 4px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  figure { margin: 0; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 12px; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 4px; background: #fff; }
+  figcaption { font-size: .87rem; color: var(--muted); margin-top: 8px; }
+  footer { margin-top: 3.5em; padding-top: 1.4em; border-top: 1px solid var(--rule);
+    font-size: .9rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Services and demographics across Helsinki</h1>
+  <p class="lede">
+    How does the availability of everyday public and commercial services across
+    Helsinki's postal areas and districts line up with residents' income and
+    education — and what would it take to attract and keep high-earning,
+    highly educated residents?
+  </p>
+
+  <h2>Findings</h2>
+  <ul class="findings">
+    <li>
+      <strong>Service density falls sharply from the centre outward.</strong>
+      Services per capita range from 0.044 in the best-served postal areas
+      (00160 and 00170) down to 0.004 at the low end — an elevenfold spread
+      across the city's 84 postal areas.
+    </li>
+    <li>
+      <strong>The same districts lead on income and education.</strong>
+      Kaivopuisto, Marjaniemi, Eira, Kaartinkaupunki and Kuusisaari rank highest
+      on median salary against share of educated residents; Jakomäki, Kontula
+      and Itäkeskus rank lowest on both.
+    </li>
+    <li>
+      <strong>Everyday retail follows the same gradient, roughly 2:1.</strong>
+      Ullanlinna has 1.76 grocery stores per 1,000 residents and Kampinmalmi
+      1.69, against 0.82 in Mellunkylä and 0.59 in Vuosaari.
+    </li>
+    <li>
+      <strong>But the pattern is not uniform, and that is the interesting part.</strong>
+      Jakomäki — among the lowest-income districts — has the second-highest
+      pharmacy density at 1.74 per 10,000 residents, ahead of affluent
+      Munkkiniemi and Ullanlinna. Vuosaari, not the lowest-income district, is
+      the most underserved at 0.25. Affluent Munkkiniemi has the most crowded
+      daycare centres of the six districts studied, at about 86 children each.
+      Service provision does not track income cleanly.
+    </li>
+  </ul>
+
+  <h2>Interactive map</h2>
+  <a class="mapcard" href="services_map.html">
+    <strong>Services per capita by postal code →</strong>
+    Choropleth of all 84 Helsinki postal areas, shaded by services per
+    resident. Hover any area for its postal code.
+  </a>
+
+  <h2>District comparisons</h2>
+  <div class="grid">
+    <figure><img src="assets/children_per_daycare.png" alt="Children per daycare centre by district"><figcaption>Children per daycare centre</figcaption></figure>
+    <figure><img src="assets/playgrounds_per_1000_children.png" alt="Playgrounds per 1,000 children by district"><figcaption>Playgrounds per 1,000 children</figcaption></figure>
+    <figure><img src="assets/sports_facilities_per_1000.png" alt="Sports facilities per 1,000 residents by district"><figcaption>Sports facilities per 1,000 residents</figcaption></figure>
+    <figure><img src="assets/grocery_stores_per_1000.png" alt="Grocery stores per 1,000 residents by district"><figcaption>Grocery stores per 1,000 residents</figcaption></figure>
+    <figure><img src="assets/pharmacies_per_10000.png" alt="Pharmacies per 10,000 residents by district"><figcaption>Pharmacies per 10,000 residents</figcaption></figure>
+    <figure><img src="assets/alko_per_10000.png" alt="Alko stores per 10,000 residents by district"><figcaption>Alko stores per 10,000 residents</figcaption></figure>
+    <figure><img src="assets/employment_sectors.png" alt="Employment sector distribution by district"><figcaption>Employment sector distribution</figcaption></figure>
+  </div>
+
+  <footer>
+    Analysis by Anastasiia Kosareva. Data from Helsinki region open data, 2019.
+    Figures are the committed outputs of
+    <a href="https://github.com/AnastasiiaX/helsinki-services-and-demographics">helsinki_services_analysis.ipynb</a>.
+  </footer>
+
+</div>
+</body>
+</html>

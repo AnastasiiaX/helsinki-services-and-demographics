@@ -1,0 +1,9 @@
+# Packages used by helsinki_services_analysis.ipynb and scripts/export_html.py
+pandas
+numpy
+openpyxl
+plotly
+folium
+geojson
+matplotlib
+jupyter
